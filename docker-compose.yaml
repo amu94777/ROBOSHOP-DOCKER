@@ -1,6 +1,6 @@
 networks:
   default:
-    external: true
+    external: 
       name: roboshop
 services:
   mongodb:
@@ -22,7 +22,7 @@ services:
     - catalogue 
 
   redis:
-    image: redis:v1
+    image: redis
     container_name: redis
 
   user:
@@ -51,7 +51,7 @@ services:
 
   rabbitmq:
     container_name: rabbitmq
-    image: rabbitmq:v1
+    image: rabbitmq
     environment:
     - RABBITMQ_DEFAULT_USER=roboshop
     - RABBITMQ_DEFAULT_PASS=roboshop123
